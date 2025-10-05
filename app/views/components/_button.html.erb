@@ -1,0 +1,10 @@
+<%# Usage:
+  <%= render "components/button", text: "Start Chat", variant: "primary", size: "lg" %>
+
+<%
+  variant_class = "btn-#{variant || 'primary'}"
+%>
+
+<button class="btn <%= variant_class %>">
+  <%= text %>
+</button>

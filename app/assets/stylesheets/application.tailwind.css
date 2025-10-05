@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+@tailwind utilities;
+
+@import "./components/buttons.css";
