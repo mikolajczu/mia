@@ -1,0 +1,8 @@
+<div class="flex flex-col items-center justify-center min-h-screen bg-sky-200">
+  <img src="<%= asset_path('mia.png') %>" alt="Mia" class="mb-6 w-32 h-32 rounded-full shadow-lg" />
+  <h1 class="text-4xl font-bold mb-4">Welcome to MiaAI</h1>
+  <p class="text-lg mb-8">Change yourself for the better!</p>
+  <a href="/chat">
+    <%= render "components/button", text: "Start Chat", variant: "primary" %>
+  </a>
+</div>
