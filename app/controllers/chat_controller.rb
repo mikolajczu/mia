@@ -6,14 +6,12 @@ class ChatController < ApplicationController
   end
 
   def create
-    if guest_chat_limit_reached?
-      return render json: { reply: 'You’ve reached the guest message limit. Please sign up to continue.' }
-    end
+    return render json: { reply: I18n.t('chat.index.guest_message_limit') } if guest_chat_limit_reached?
 
     @chat.messages.create!(sender: 'user', content: params[:message])
 
     # For now, we return a static response. Replace this with actual OpenAI API call.
-    ai_reply = "Hello! I'm Mia, your mental health assistant. How can I assist you today?"
+    ai_reply = I18n.t('chat.index.welcome_message')
     @chat.messages.create!(sender: 'mia', content: ai_reply)
 
     # Simulate processing delay
@@ -50,7 +48,7 @@ class ChatController < ApplicationController
 
     @chat.messages.create!(
       sender: 'mia',
-      content: "Hello! I'm Mia, your mental health assistant. How can I assist you today?"
+      content: I18n.t('chat.index.welcome_message')
     )
   end
 

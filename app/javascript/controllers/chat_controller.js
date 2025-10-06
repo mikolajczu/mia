@@ -3,6 +3,13 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["input", "messages"]
 
+  connect() {
+    this.messagesTarget.scrollTo({
+      top: this.messagesTarget.scrollHeight,
+      behavior: "smooth"
+    })
+  }
+
   async sendMessage(e) {
     e.preventDefault()
 

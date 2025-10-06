@@ -1,13 +1,13 @@
 <section class="flex flex-col md:flex-row items-center justify-between max-w-6xl mt-32 px-6">
   <div class="md:w-1/2 space-y-6" data-controller="animation" data-animation-type-value="fade" data-animation-fade-in-delay-value="200">
     <h2 class="text-5xl font-bold text-slate-800 leading-tight">
-      Talk to <span class="text-sky-500">Mia</span>, your AI Psychologist.
+      <%= t('.title_1') %> <span class="text-sky-500"><%= t('.mia') %></span><%= t('.title_2') %>
     </h2>
     <p class="text-slate-500 text-lg">
-      Open up, reflect, and grow — Mia listens, understands, and guides you toward balance.
+      <%= t('.p_1') %>
     </p>
     <a href="/chat" class="bg-sky-500 hover:bg-sky-600 text-white px-6 py-4 rounded-xl font-medium shadow-sm transition active:scale-95">
-      Start Chatting
+      <%= t('.start_chatting') %>
     </a>
   </div>
 
@@ -18,52 +18,51 @@
 
 <section class="flex justify-between max-w-6xl mt-32 px-6" data-controller="animation" data-animation-type-value="fade" data-animation-fade-in-delay-value="400">
   <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-3xl font-bold text-slate-800 mb-6">Why Mia?</h2>
+    <h2 class="text-3xl font-bold text-slate-800 mb-6"><%= t('.section_1_title') %></h2>
     <p class="text-slate-600 max-w-2xl mx-auto mb-12">
-      Mia helps you track your mental wellbeing, reflect daily, and chat with an AI that remembers your journey.
-      Build healthy habits, reduce stress, and improve your mood — all in one simple app.
+      <%= t('.section_1_p') %>
     </p>
 
     <div class="grid md:grid-cols-3 gap-8">
       <div class="bg-white rounded-2xl shadow-sm p-6">
-        <h3 class="text-lg font-semibold text-sky-500 mb-2">Empathetic Conversations</h3>
-        <p class="text-slate-500 text-sm">Mia listens without judgment and helps you reflect gently.</p>
+        <h3 class="text-lg font-semibold text-sky-500 mb-2"><%= t('.section_1_card_1_title') %></h3>
+        <p class="text-slate-500 text-sm"><%= t('.section_1_card_1_desc') %></p>
       </div>
 
       <div class="bg-white rounded-2xl shadow-sm p-6">
-        <h3 class="text-lg font-semibold text-sky-500 mb-2">AI-Driven Insights</h3>
-        <p class="text-slate-500 text-sm">Understand your emotions and patterns with AI analysis.</p>
+        <h3 class="text-lg font-semibold text-sky-500 mb-2"><%= t('.section_1_card_2_title') %></h3>
+        <p class="text-slate-500 text-sm"><%= t('.section_1_card_2_desc') %></p>
       </div>
 
       <div class="bg-white rounded-2xl shadow-sm p-6">
-        <h3 class="text-lg font-semibold text-sky-500 mb-2">Always Available</h3>
-        <p class="text-slate-500 text-sm">Talk to Mia anytime, anywhere — no appointments needed.</p>
+        <h3 class="text-lg font-semibold text-sky-500 mb-2"><%= t('.section_1_card_3_title') %></h3>
+        <p class="text-slate-500 text-sm"><%= t('.section_1_card_3_desc') %></p>
       </div>
     </div>
   </div>
 </section>
 
 <section class="flex justify-between max-w-6xl mt-32 px-6" data-controller="animation" data-animation-type-value="fade" data-animation-fade-in-delay-value="400">
-  <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-3xl font-bold text-slate-800 mb-6">Track Your Growth</h2>
+    <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-slate-800 mb-6"><%= t('.section_2_title') %></h2>
     <p class="text-slate-600 max-w-2xl mx-auto mb-12">
-      Mia helps you visualize your emotional journey — see your progress, stay motivated, and celebrate your wins.
+      <%= t('.section_2_p') %>
     </p>
 
     <div class="grid md:grid-cols-3 gap-8">
       <div class="bg-white rounded-2xl shadow-sm p-6">
-        <h3 class="text-lg font-semibold text-sky-500 mb-2">Mood Graphs</h3>
-        <p class="text-slate-500 text-sm">Daily reflections turn into beautiful insights about your emotions.</p>
+        <h3 class="text-lg font-semibold text-sky-500 mb-2"><%= t('.section_2_card_1_title') %></h3>
+        <p class="text-slate-500 text-sm"><%= t('.section_2_card_1_desc') %></p>
       </div>
 
       <div class="bg-white rounded-2xl shadow-sm p-6">
-        <h3 class="text-lg font-semibold text-sky-500 mb-2">Streak Rewards</h3>
-        <p class="text-slate-500 text-sm">Stay consistent with Mia and unlock rewards for every milestone.</p>
+        <h3 class="text-lg font-semibold text-sky-500 mb-2"><%= t('.section_2_card_2_title') %></h3>
+        <p class="text-slate-500 text-sm"><%= t('.section_2_card_2_desc') %></p>
       </div>
 
       <div class="bg-white rounded-2xl shadow-sm p-6">
-        <h3 class="text-lg font-semibold text-sky-500 mb-2">Personal Insights</h3>
-        <p class="text-slate-500 text-sm">Get personalized summaries and reflections tailored to your growth.</p>
+        <h3 class="text-lg font-semibold text-sky-500 mb-2"><%= t('.section_2_card_3_title') %></h3>
+        <p class="text-slate-500 text-sm"><%= t('.section_2_card_3_desc') %></p>
       </div>
     </div>
   </div>
@@ -71,32 +70,31 @@
 
 <section class="flex justify-between px-6 mt-32" data-controller="animation" data-animation-type-value="fade" data-animation-fade-in-delay-value="400">
   <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-2xl font-bold text-red-700 mb-4">Need urgent help?</h2>
+    <h2 class="text-2xl font-bold text-red-700 mb-4"><%= t('.section_3_title') %></h2>
     <p class="text-red-700 mb-6">
-      Mia is an AI assistant and <strong>cannot replace a licensed mental health professional</strong>.
-      If you are in crisis or think about harming yourself, please seek immediate help.
+      <%= t('.section_3_p_1_1') %><strong><%= t('.section_3_p_1_2') %></strong><%= t('.section_3_p_1_3') %>
     </p>
     <div class="grid md:grid-cols-2 gap-8">
       <div class="bg-white rounded-xl shadow-sm p-4 flex items-center gap-3">
         <%= inline_svg_tag 'phone.svg', class: "w-6 h-6 stroke-red-500" %>
         <div class="text-left">
-          <p class="font-semibold text-slate-800">National Crisis Line</p>
-          <a href="tel:116123" class="text-red-600 font-bold hover:underline">116 123</a>
-          <p class="text-xs text-slate-500">Free, 24/7 in Poland</p>
+          <p class="font-semibold text-slate-800"><%= t('.section_3_card_1_title') %></p>
+          <a href="tel:116123" class="text-red-600 font-bold hover:underline"><%= t('.section_3_card_1_phone') %></a>
+          <p class="text-xs text-slate-500"><%= t('.section_3_card_1_desc') %></p>
         </div>
       </div>
 
       <div class="bg-white rounded-xl shadow-sm p-4 flex items-center gap-3">
         <%= inline_svg_tag 'phone.svg', class: "w-6 h-6 stroke-red-500" %>
         <div class="text-left">
-          <p class="font-semibold text-slate-800">Emergency (Police / Ambulance)</p>
-          <a href="tel:112" class="text-red-600 font-bold hover:underline">112</a>
-          <p class="text-xs text-slate-500">Immediate emergency assistance</p>
+          <p class="font-semibold text-slate-800"><%= t('.section_3_card_2_title') %></p>
+          <a href="tel:112" class="text-red-600 font-bold hover:underline"><%= t('.section_3_card_2_phone') %></a>
+          <p class="text-xs text-slate-500"><%= t('.section_3_card_2_desc') %></p>
         </div>
       </div>
     </div>
     <p class="mt-8 text-slate-600 text-sm">
-      If you're outside Poland, please call your local emergency number or mental health helpline.
+      <%= t('.section_3_p_2') %>
     </p>
   </div>
 </section>

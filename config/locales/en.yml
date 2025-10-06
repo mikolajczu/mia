@@ -28,4 +28,53 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  chat:
+    index:
+      input_placeholder: How are you feeling today?
+      send_button: Send
+      welcome_message: Hello! I'm Mia, your mental health assistant. How can I assist you today?
+      guest_message_limit: You’ve reached the guest message limit. Please sign up to continue.
+  home:
+    index:
+      title_1: Talk to
+      mia: Mia
+      title_2: ', your AI Psychologist.'
+      p_1: Open up, reflect, and grow — Mia listens, understands, and guides you toward balance.
+      start_chatting: Start Chatting
+      section_1_title: Why Mia?
+      section_1_p: Mia helps you track your mental wellbeing, reflect daily, and chat with an AI that remembers your journey. Build healthy habits, reduce stress, and improve your mood — all in one simple app.
+      section_1_card_1_title: Empathetic Conversations
+      section_1_card_1_desc: Mia listens without judgment and helps you reflect gently.
+      section_1_card_2_title: AI-Driven Insights
+      section_1_card_2_desc: Understand your emotions and patterns with AI analysis.
+      section_1_card_3_title: Always Available
+      section_1_card_3_desc: Talk to Mia anytime, anywhere — no appointments needed.
+      section_2_title: Track Your Growth
+      section_2_p: Mia helps you visualize your emotional journey — see your progress, stay motivated, and celebrate your wins.
+      section_2_card_1_title: Mood Graphs
+      section_2_card_1_desc: Daily reflections turn into beautiful insights about your emotions.
+      section_2_card_2_title: Streak Rewards
+      section_2_card_2_desc: Stay consistent with Mia and unlock rewards for every milestone.
+      section_2_card_3_title: Personal Insights
+      section_2_card_3_desc: Get personalized summaries and reflections tailored to your growth.
+      section_3_title: Need urgent help?
+      section_3_p_1_1: 'Mia is an AI assistant and '
+      section_3_p_1_2: cannot replace a licensed mental health professional
+      section_3_p_1_3: . If you are in crisis or think about harming yourself, please seek immediate help.
+      section_3_card_1_title: National Crisis Line
+      section_3_card_1_phone: 116 123
+      section_3_card_1_desc: Free, 24/7 in Poland
+      section_3_card_2_title: Emergency (Police / Ambulance)
+      section_3_card_2_phone: 112
+      section_3_card_2_desc: Immediate emergency assistance
+      section_3_p_2: If you're outside Poland, please call your local emergency number or mental health helpline.
+  layouts:
+    footer:
+      c: '©'
+      rights: 'Mia. All rights reserved.'
+    navbar:
+      name: MiaAI
+      log_in: Log in
+      sign_up: Sign up
+      chat_with_mia: Chat with Mia
+      log_out: Log out
