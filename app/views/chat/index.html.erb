@@ -2,13 +2,11 @@
   <div data-chat-target="messages" class="flex-1 overflow-y-auto p-6 space-y-4 bg-slate-50">
     <% @messages.each do |message| %>
       <div class="message <%= message.sender == 'mia' ? 'mia' : 'user' %>">
-        <div class="avatar">
-          <% if message.sender == 'mia' %>
-            <%= image_tag 'mia.png', alt: 'Mia Avatar', class: 'avatar' %>
-          <% else %>
-            <%= image_tag 'user.png', alt: 'User Avatar', class: 'avatar' %>
-          <% end %>
-        </div>
+        <% if message.sender == 'mia' %>
+          <%= image_tag 'mia.png', alt: 'Mia', class: 'avatar' %>
+        <% else %>
+          <%= image_tag 'user.png', alt: 'You', class: 'avatar' %>
+        <% end %>
         <div class="bubble">
           <%= message.content %>
         </div>
