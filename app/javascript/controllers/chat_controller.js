@@ -3,10 +3,6 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["input", "messages"]
 
-  async connect() {
-    await this.typeMessage("Hello! I'm Mia, your mental health assistant. How can I assist you today?")
-  }
-
   async sendMessage(e) {
     e.preventDefault()
 
@@ -20,9 +16,10 @@ export default class extends Controller {
 
     const typingIndicator = this.addTypingIndicator()
 
+    const token = document.querySelector('meta[name="csrf-token"]').content;
     const response = await fetch("/chat", {
       method: "POST",
-      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      headers: { "Content-Type": "application/json", "Accept": "application/json", "X-CSRF-Token": token },
       body: JSON.stringify({ message: content })
     })
 
