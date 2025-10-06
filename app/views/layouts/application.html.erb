@@ -12,6 +12,9 @@
 
   <body class="flex flex-col min-h-screen bg-slate-50">
     <%= render "layouts/navbar" %>
+    <%# Temporary placeholder for flash messages %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <main class="flex-1 flex flex-col items-center">
       <%= yield %>
     </main>

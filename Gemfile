@@ -18,8 +18,11 @@ gem 'tzinfo-data', platforms: %i[windows jruby]
 
 group :development, :test do
   gem 'byebug'
+  gem 'database_cleaner'
   gem 'debug', platforms: %i[mri windows]
   gem 'dotenv-rails'
+  gem 'factory_bot'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -30,3 +33,5 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
 end
+
+gem 'devise', '~> 4.9'
