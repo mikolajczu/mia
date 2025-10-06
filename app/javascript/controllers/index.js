@@ -5,5 +5,7 @@
 import { application } from "./application"
 
 import AnimationController from "./animation_controller"
+import ChatController from "./chat_controller"
 
 application.register("animation", AnimationController)
+application.register("chat", ChatController)

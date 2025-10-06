@@ -2,4 +2,4 @@
 
 @tailwind utilities;
 
-@import "./components/buttons.css";
+@import "./pages/chat.css";
