@@ -1,0 +1,5 @@
+:scheduler:
+  :schedule:
+    DeleteOldChatsJob:
+      cron: "0 * * * * *"
+      enabled: true
