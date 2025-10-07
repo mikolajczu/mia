@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["input", "messages"]
+  static targets = ["input", "messages", "chatId"]
 
   connect() {
     this.messagesTarget.scrollTo({
@@ -14,7 +14,8 @@ export default class extends Controller {
     e.preventDefault()
 
     const content = this.inputTarget.value.trim()
-    if (!content || this.isLocked) return
+    const chatId = this.chatIdTarget.value
+    if (!content || !chatId || this.isLocked) return
 
     this.addMessage(content)
     this.inputTarget.value = ""
@@ -24,10 +25,10 @@ export default class extends Controller {
     const typingIndicator = this.addTypingIndicator()
 
     const token = document.querySelector('meta[name="csrf-token"]').content;
-    const response = await fetch("/chat", {
+    const response = await fetch("/messages", {
       method: "POST",
       headers: { "Content-Type": "application/json", "Accept": "application/json", "X-CSRF-Token": token },
-      body: JSON.stringify({ message: content })
+      body: JSON.stringify({ chat_id: chatId, message: content })
     })
 
     const data = await response.json()

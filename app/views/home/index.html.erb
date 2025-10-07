@@ -6,9 +6,9 @@
     <p class="text-slate-500 text-lg">
       <%= t('.p_1') %>
     </p>
-    <a href="/chat" class="bg-sky-500 hover:bg-sky-600 text-white px-6 py-4 rounded-xl font-medium shadow-sm transition active:scale-95">
+    <%= link_to new_chat_path, class: "bg-sky-500 hover:bg-sky-600 text-white px-6 py-4 rounded-xl font-medium shadow-sm transition active:scale-95" do %>
       <%= t('.start_chatting') %>
-    </a>
+    <% end %>
   </div>
 
   <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center" data-controller="animation" data-animation-type-value="fade" data-animation-fade-in-delay-value="600">

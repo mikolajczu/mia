@@ -28,12 +28,14 @@
 #       enabled: "ON"
 
 en:
-  chat:
-    index:
+  chats:
+    show:
       input_placeholder: How are you feeling today?
       send_button: Send
-      welcome_message: Hello! I'm Mia, your mental health assistant. How can I assist you today?
-      guest_message_limit: You’ve reached the guest message limit. Please sign up to continue.
+    sidebar:
+      title: Your Chats
+      chat_from: Chat from
+      new_chat: New Chat
   home:
     index:
       title_1: Talk to
@@ -68,6 +70,11 @@ en:
       section_3_card_2_phone: 112
       section_3_card_2_desc: Immediate emergency assistance
       section_3_p_2: If you're outside Poland, please call your local emergency number or mental health helpline.
+  messages:
+    create:
+      guest_message_limit: You’ve reached the guest message limit. Please sign up to continue.
+      welcome_message: Hello! I'm Mia, your mental health assistant. How can I assist you today?
+      error: Oops! Something went wrong. Please try again.
   layouts:
     footer:
       c: '©'

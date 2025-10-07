@@ -6,7 +6,7 @@
 
   <nav class="space-x-6 text-slate-600">
     <% if user_signed_in? %>
-      <%= link_to t('.chat_with_mia'), chat_index_path, class: 'hover:text-slate-800' %>
+      <%= link_to t('.chat_with_mia'), new_chat_path, class: 'hover:text-slate-800' %>
       <%= link_to t('.log_out'), destroy_user_session_path, data: { turbo_method: :delete }, class: 'font-medium hover:text-slate-800' %>
     <% else %>
       <%= link_to t('.log_in'), new_user_session_path, class: 'hover:text-slate-800' %>

@@ -2,6 +2,6 @@ Rails.application.routes.draw do
   devise_for :users
   root 'home#index'
 
-  resources :chat, only: [:create]
-  get '/chat', to: 'chat#index'
+  resources :chats, only: %i[show new]
+  resources :messages, only: %i[create]
 end

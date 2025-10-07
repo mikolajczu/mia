@@ -1,0 +1,14 @@
+<aside class="w-64 bg-slate-100 border-r border-slate-200 p-4 flex flex-col">
+  <h3 class="text-slate-700 font-semibold mb-3"><%= t('.title') %></h3>
+  <ul class="space-y-2 overflow-y-auto">
+    <% @chats.each do |chat| %>
+      <li>
+        <%= link_to chat_path(chat), class: "block p-2 rounded-lg hover:bg-slate-200 transition" do %>
+          <%= t('.chat_from') %> <%= chat.created_at.strftime("%b %d, %H:%M") %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+
+  <%= link_to t('.new_chat'), new_chat_path, class: "mt-auto bg-sky-500 hover:bg-sky-600 text-white text-center py-2 rounded-lg font-medium transition" %>
+</aside>

@@ -1,0 +1,31 @@
+<div class="flex min-h-[80vh] max-w-6xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+  <% if user_signed_in? %>
+    <%= render "sidebar" %>
+  <% end %>
+
+  <div id="chat" data-controller="chat" class="flex flex-col flex-1 h-[80vh] bg-white">
+    <div data-chat-target="messages" class="flex-1 overflow-y-auto p-6 space-y-4 bg-slate-50">
+      <% @messages.each do |message| %>
+        <div class="message <%= message.sender == 'mia' ? 'mia' : 'user' %>">
+          <% if message.sender == 'mia' %>
+            <%= image_tag 'mia.png', alt: 'Mia', class: 'avatar' %>
+          <% else %>
+            <%= image_tag 'user.png', alt: 'You', class: 'avatar' %>
+          <% end %>
+          <div class="bubble">
+            <%= message.content %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <form data-action="submit->chat#sendMessage" class="border-t border-slate-200 bg-white p-4 flex items-center gap-3">
+      <input type="hidden" data-chat-target="chatId" value="<%= @chat.id %>"/>
+      <input type="text" data-chat-target="input" class="flex-grow border border-slate-300 focus:border-sky-500 focus:ring-sky-500 rounded-xl px-4 py-2 outline-none transition" placeholder="<%= t('.input_placeholder') %>"/>
+
+      <button type="submit" class="bg-sky-500 hover:bg-sky-600 text-white px-5 py-2 rounded-xl font-medium shadow-sm transition active:scale-95 cursor-pointer">
+        <%= t('.send_button') %>
+      </button>
+    </form>
+  </div>
+</div>
