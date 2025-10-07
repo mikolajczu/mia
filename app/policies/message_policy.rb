@@ -3,7 +3,7 @@ class MessagePolicy < ApplicationPolicy
     return true if user.present? && record.chat.user_id == user.id
 
     # Temporary session access for guest users
-    return true unless user.present?
+    return true unless user.present? && !record.chat.user_id.nil?
 
     false
   end
@@ -12,8 +12,8 @@ class MessagePolicy < ApplicationPolicy
     def resolve
       if user.present?
         scope.joins(:chat).where(chats: { user_id: user.id })
-      elsif !user.present?
-        scope.joins(:chat).where(chats: { id: record.chat.id }) # Placeholder condition for guest users
+      elsif !user.present? && record.chat.user_id.nil?
+        scope.joins(:chat).where(chats: { id: record.chat.id })
       else
         scope.none
       end
