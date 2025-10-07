@@ -11,7 +11,7 @@ class Messages::SendMessageService
     @chat.messages.create!(sender: 'user', content: @content)
 
     # For now, we return a static response. Replace this with actual OpenAI API call.
-    ai_reply = I18n.t('messages.create.welcome_message')
+    ai_reply = Faker::Lorem.sentence(word_count: 15)
     @chat.messages.create!(sender: 'mia', content: ai_reply)
 
     # Simulate processing delay
