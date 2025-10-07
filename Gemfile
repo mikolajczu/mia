@@ -5,6 +5,7 @@ ruby '3.2.2'
 gem 'bootsnap', require: false
 gem 'cssbundling-rails'
 gem 'devise', '~> 4.9'
+gem 'faker', '~> 3.5'
 gem 'inline_svg'
 gem 'jbuilder'
 gem 'jsbundling-rails'
@@ -24,7 +25,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'debug', platforms: %i[mri windows]
   gem 'dotenv-rails'
-  gem 'factory_bot'
+  gem 'factory_bot_rails'
   gem 'rspec-rails'
   gem 'rubocop'
   gem 'rubocop-rspec'

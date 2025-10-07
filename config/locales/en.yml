@@ -28,6 +28,8 @@
 #       enabled: "ON"
 
 en:
+  chat:
+    either_user_or_session_token_present: Chat must belong to a user or have a session token for guest
   chats:
     show:
       input_placeholder: How are you feeling today?
