@@ -3,7 +3,7 @@ class MessagePolicy < ApplicationPolicy
     return true if user.present? && record.chat.user_id == user.id
 
     # Temporary session access for guest users
-    return true unless user.present? && !record.chat.user_id.nil?
+    return true if !user.present? && record.chat.user_id.nil?
 
     false
   end
