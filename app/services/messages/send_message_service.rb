@@ -1,5 +1,6 @@
 class Messages::SendMessageService
-  def initialize(chat:, user_signed_in:, content:)
+  def initialize(message:, chat:, user_signed_in:, content:)
+    @message = message
     @chat = chat
     @user_signed_in = user_signed_in
     @content = content
@@ -8,7 +9,7 @@ class Messages::SendMessageService
   def call
     return { error: I18n.t('messages.create.guest_message_limit') } if guest_chat_limit_reached?
 
-    @chat.messages.create!(sender: 'user', content: @content)
+    @message.save!
 
     # For now, we return a static response. Replace this with actual OpenAI API call.
     ai_reply = Faker::Lorem.sentence(word_count: 15)

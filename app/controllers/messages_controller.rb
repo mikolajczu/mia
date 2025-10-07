@@ -2,7 +2,9 @@ class MessagesController < ApplicationController
   before_action :set_chat
 
   def create
+    message = authorize Message.new(chat: @chat, sender: 'user', content: params[:message])
     result = Messages::SendMessageService.new(
+      message: message,
       chat: @chat,
       user_signed_in: user_signed_in?,
       content: params[:message]
